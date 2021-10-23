@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VIP1首页</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/semantic.min.css}">
+    <script th:src="@{https://cdn.bootcss.com/jquery/3.4.1/jquery.js}"></script>
+    <script th:src="@{/semantic.min.js}"></script>
+    <script th:src="@{/artplayer.js}"></script>
+</head>
+<body style="width: 100%; height: 100%">
+<div>
+<div align="center">
+    <h1 class="ui header">VIP1页面</h1>
+    <hr>
+    <p style="size: 30px">每天都要Happy-加油！！！</p>
+<!--    <div class="artplayer-app" style="width:800px;height:600px">-->
+    <iframe src="//player.bilibili.com/player.html?aid=45973690&bvid=BV18b411e7kt&cid=80532316&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="500"> </iframe>
+    </div>
+    <div align="center">
+        <a href="/" style="size: 20px">返回首页</a>
+    </div>
+</div>
+<!--<script>-->
+<!--    var art = new Artplayer({-->
+<!--        container: '.artplayer-app',-->
+<!--        url: '/mp4/加油.mp4',-->
+<!--        title: '加油哦',-->
+<!--        screenshot: true,-->
+<!--        autoSize: true,-->
+<!--        setting: true,-->
+<!--        fullscreen: true,-->
+<!--        hotkey: true,-->
+<!--    });-->
+<!--</script>-->
+</body>
+</html>

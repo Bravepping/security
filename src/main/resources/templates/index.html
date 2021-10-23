@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--使用Bootstrap的js插件，必须先调入jQuery-->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <h4>
+                        加油冲冲冲！
+                    </h4> <strong>springboot-security-mybatis-集成demo</strong>
+                </div>
+
+                <h4 class="text-center">
+                    <em>springboot-security-mybatis-集成demo</em>
+                </h4>
+                <hr>
+                <div sec:authorize="!isAuthenticated()" align="center">
+                    <p>当前未登录：<a href="/toLogin" style="size: 25px;">点击登录</a></p>
+                </div>
+                <div sec:authorize="isAuthenticated()" align="center">
+                        用户名：<span sec:authentication="principal.username"></span>
+                        角色：<span sec:authentication="principal.authorities"></span>
+                </div>
+                <br>
+                <a href="/logout"><button class="btn btn-danger btn-large btn-block" type="button">退出登录</button></a>
+                <a href="/vip0" style="color: mintcream"><button class="btn btn-large btn-success btn-block" type="button" >通用页面</button></a>
+                <a href="/vip1" style="color: mintcream"><button class="btn btn-large btn-primary btn-block" type="button">VIP1页面——小小惊喜</button></a>
+                <a href="/vip2" style="color: mintcream"><button class="btn btn-large btn-primary btn-block" type="button">VIP2页面——大大惊喜</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
